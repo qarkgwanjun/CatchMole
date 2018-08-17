@@ -1,11 +1,4 @@
-#include <iostream>
-#include <stdlib.h>
-#include <Windows.h>
-#include <Time.h>
-#include <conio.h>
-
-#define TRUE 1
-using namespace std;
+#include "main.h"
 
 void gotoxy(int x, int y) {// 콘솔 화면 커서 이동
 COORD pos = { x,y };
