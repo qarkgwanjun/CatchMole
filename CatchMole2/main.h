@@ -14,6 +14,6 @@ void KeepHole();
 int MoveMole(int *Location);
 int* Location();
 int MoleToCatch(int *a);
-void PrintResult(int *score, int *count);
+int PrintResult(int *score, int *count, int *last);
 
 

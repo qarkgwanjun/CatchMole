@@ -1,102 +1,13 @@
 #include "main.h"
 
-/*void gotoxy(int x, int y) {// 콘솔 화면 커서 이동
-COORD pos = { x,y };
-SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 
-}
-void setcolor(int color, int bgcolor) {//콘솔 화면 글자 색 변경
-color &= 0xf;
-bgcolor &= 0xf;
-
-SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
-}
-void KeepHole() {
-	int y = 10;
-	int x = 0;
-	for (int i = 0; i < 9; i++) {
-		x += 20;
-		gotoxy(x, y);
-		cout << "(|      |)" << endl;
-		if (x % 3 == 0) {
-			y += 3;
-			x = 0;
-		}
-	}
-}
-int MoveMole(int *Location) {
-	int rn1 = rand() % 3;
-	int rn2 = rand() % 3 + 3;
-	int c = 0;
-	gotoxy(Location[rn1], Location[rn2]);
-	cout << " |0 nn 0|" << endl;
-
-	if (Location[rn1] == 20 && Location[rn2] == 9)
-		c = 7;
-	else if (Location[rn1] == 40 && Location[rn2] == 9)
-		c = 8;
-	else if (Location[rn1] == 60 && Location[rn2] == 9)
-		c = 9;
-	else if (Location[rn1] == 20 && Location[rn2] == 12)
-		c = 4;
-	else if (Location[rn1] == 40 && Location[rn2] == 12)
-		c = 5;
-	else if (Location[rn1] == 60 && Location[rn2] == 12)
-		c = 6;
-	else if (Location[rn1] == 20 && Location[rn2] == 15)
-		c = 1;
-	else if (Location[rn1] == 40 && Location[rn2] == 15)
-		c = 2;
-	else if (Location[rn1] == 60 && Location[rn2] == 15)
-		c = 3;
-	return c;
-}
-int* Location() {
-	// 입력받은 크기 만큼의 int의 배열을 만든다.
-	void* ar1 = (int*)malloc(sizeof(int) * 6);
-	int* ip1 = (int*)ar1;
-	ip1[0] = 20;
-	ip1[1] = 40;
-	ip1[2] = 60;
-	ip1[3] = 9;
-	ip1[4] = 12;
-	ip1[5] = 15;
-
-	return ip1;
-}
-int MoleToCatch(int *a){
-	int touch = 0;
-	int count = 0;
-	KeepHole();
-	cin >> touch;
-	if (touch == *a) {
-		count = 11;
-		return count;
-	}
-	else {
-		count = 12;
-		return count;
-	}
-}
-void PrintResult(int *score, int *count) {
-	if (*score == 11) {
-		*count += 100;
-		gotoxy(40, 19);
-		cout << "정답 : " << *count << "점";
-	}
-	else if (*score == 12) {
-		*count -= 100;
-		gotoxy(40, 19);
-		cout << "실패 : " << *count << "점";
-	}
-}*/
 int main()
 {
 	int sec = 3;
 	int count = 0;
+	int last = 0;
 	srand((unsigned)time(NULL));
-	setcolor(10, 0);                //10 :초록
-
+	/*setcolor(10, 0);                //10 :초록
 									//게임 시작 전 화면
 	gotoxy(18, 3);
 	cout << "┌────────────────────┐" << endl;
@@ -119,7 +30,6 @@ int main()
 	system("cls");
 
 	//게임 대기 화면
-
 	for (int i = 0; i < 3; i++) // 게임 5초 대기
 	{
 		setcolor(10, 0);                //10 :초록
@@ -130,17 +40,25 @@ int main()
 	}
 	system("cls");
 	//게임 시작 화면
-
+	*/
 	while (TRUE)
 	{
-		KeepHole();
 		int* rn = Location();
+		KeepHole();
+
 		int IsMoleHead = MoveMole(rn);
 
-		int score = MoleToCatch(&IsMoleHead);
-		PrintResult(&score, &count);
+		//MoleToCatch(&IsMoleHead);
 
-		Sleep(500);
+		int Score = MoleToCatch(&IsMoleHead);
+
+		int Finish = PrintResult(&Score, &count, &last);
+		if (Finish == 1000)
+		{
+			break;
+		}
+
+		Sleep(1000);
 		system("cls");
 		free(rn);
 	}
