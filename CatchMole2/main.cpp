@@ -31,6 +31,46 @@ void KeepHole() {
 		}
 	}
 }
+int MoveMole(int *Location) {
+	int rn1 = rand() % 3;
+	int rn2 = rand() % 3 + 3;
+	int c = 0;
+	gotoxy(Location[rn1], Location[rn2]);
+	cout << " |0 nn 0|" << endl;
+
+	if (Location[rn1] == 20 && Location[rn2] == 9)
+		c = 7;
+	else if (Location[rn1] == 40 && Location[rn2] == 9)
+		c = 8;
+	else if (Location[rn1] == 60 && Location[rn2] == 9)
+		c = 9;
+	else if (Location[rn1] == 20 && Location[rn2] == 12)
+		c = 4;
+	else if (Location[rn1] == 40 && Location[rn2] == 12)
+		c = 5;
+	else if (Location[rn1] == 60 && Location[rn2] == 12)
+		c = 6;
+	else if (Location[rn1] == 20 && Location[rn2] == 15)
+		c = 1;
+	else if (Location[rn1] == 40 && Location[rn2] == 15)
+		c = 2;
+	else if (Location[rn1] == 60 && Location[rn2] == 15)
+		c = 3;
+	return c;
+}
+int* Location() {
+	// 입력받은 크기 만큼의 int의 배열을 만든다.
+	void* ar1 = (int*)malloc(sizeof(int) * 6);
+	int* ip1 = (int*)ar1;
+	ip1[0] = 20;
+	ip1[1] = 40;
+	ip1[2] = 60;
+	ip1[3] = 9;
+	ip1[4] = 12;
+	ip1[5] = 15;
+
+	return ip1;
+}
 int main()
 {
 	int sec = 3;
@@ -73,6 +113,9 @@ int main()
 	while (TRUE)
 	{
 		KeepHole();
+		KeepHole();
+		int* rn = Location();
+		int IsMoleHead = MoveMole(rn);
 
 		Sleep(500);
 		system("cls");
