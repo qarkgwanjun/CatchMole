@@ -32,15 +32,16 @@ void KeepHole()
 			x = 0;
 		}
 	}
-	Sleep(100);
+	
 }
 int MoveMole(int *Location)
 {
 	int rn1 = rand() % 3;
 	int rn2 = rand() % 3 + 3;
 	int c = 0;
-	Sleep(900);
+
 	system("cls");
+	Sleep(1000);
 
 	gotoxy(Location[rn1], Location[rn2]);
 	cout << " |0 nn 0|" << endl;
@@ -80,31 +81,20 @@ int* Location()
 
 	return ip1;
 }
-int MoleToCatch(int *a, int count)
+int MoleToCatch(int *a)
 {
-	while (TRUE)
-	{
-		int touch = 0;
-		KeepHole();
-		//30~39
-		cin >> touch;
-		if (touch == *a)
-		{
-			gotoxy(40, 19);
-			cout << "정답";
-			return count;
-			break;
-		}
-		else
-		{
-			gotoxy(40, 19);
-			cout << "실패";
-			break;
-		}
-	}
+	int touch = 0;
+	KeepHole();
+	cin >> touch;
+	if (touch == *a)
+		return 11;
+	else
+		return 12;
 }
 int main()
 {
+	int count = 0;
+	int a = 0;
 	/*int random = 0;
 	int sec = 3;
 
@@ -144,7 +134,6 @@ int main()
 	//게임 시작 화면
 	sec = 60;
 	*/
-	int count = 0;
 	srand((unsigned)time(NULL));
 	while (1)
 	{
@@ -154,9 +143,21 @@ int main()
 		int IsMoleHead = MoveMole(rn);
 
 		//MoleToCatch(&IsMoleHead);
-		
-	    MoleToCatch(&IsMoleHead, count);
 
+	    int Score = MoleToCatch(&IsMoleHead);
+		if (Score == 11)
+		{
+			count+=100;
+			gotoxy(40, 19);
+			cout << "정답 : "<< count;
+		}
+		if (Score == 12)
+		{
+			count-=100;
+			gotoxy(40, 19);
+			cout<< "실패 : " << count;
+		}
+		
 		free(rn);
 	}
 	return 0;
