@@ -7,7 +7,7 @@ int main()
 	int count = 0;
 	int last = 0;
 	srand((unsigned)time(NULL));
-	/*setcolor(10, 0);                //10 :초록
+	setcolor(10, 0);                //10 :초록
 									//게임 시작 전 화면
 	gotoxy(18, 3);
 	cout << "┌────────────────────┐" << endl;
@@ -40,7 +40,7 @@ int main()
 	}
 	system("cls");
 	//게임 시작 화면
-	*/
+	
 	while (TRUE)
 	{
 		int* rn = Location();
@@ -52,8 +52,8 @@ int main()
 
 		int Score = MoleToCatch(&IsMoleHead);
 
-		int Finish = PrintResult(&Score, &count, &last);
-		if (Finish == 1000)
+		int FinishMoleGame = PrintResult(&Score, &count, &last);
+		if (FinishMoleGame == 1000)
 		{
 			break;
 		}
