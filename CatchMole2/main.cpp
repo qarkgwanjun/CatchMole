@@ -71,6 +71,32 @@ int* Location() {
 
 	return ip1;
 }
+int MoleToCatch(int *a){
+	int touch = 0;
+	int count = 0;
+	KeepHole();
+	cin >> touch;
+	if (touch == *a) {
+		count = 11;
+		return count;
+	}
+	else {
+		count = 12;
+		return count;
+	}
+}
+void PrintResult(int *score, int *count) {
+	if (*score == 11) {
+		*count += 100;
+		gotoxy(40, 19);
+		cout << "정답 : " << *count << "점";
+	}
+	else if (*score == 12) {
+		*count -= 100;
+		gotoxy(40, 19);
+		cout << "실패 : " << *count << "점";
+	}
+}
 int main()
 {
 	int sec = 3;
@@ -110,16 +136,20 @@ int main()
 		Sleep(1000);
 	}
 	system("cls");
+	//게임 시작 화면
+
 	while (TRUE)
 	{
-		KeepHole();
 		KeepHole();
 		int* rn = Location();
 		int IsMoleHead = MoveMole(rn);
 
+		int score = MoleToCatch(&IsMoleHead);
+		PrintResult(&score, &count);
+
 		Sleep(500);
 		system("cls");
+		free(rn);
 	}
-
 	return 0;
 }
