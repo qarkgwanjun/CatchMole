@@ -18,7 +18,19 @@ bgcolor &= 0xf;
 
 SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
 }
-
+void KeepHole() {
+	int y = 10;
+	int x = 0;
+	for (int i = 0; i < 9; i++) {
+		x += 20;
+		gotoxy(x, y);
+		cout << "(|      |)" << endl;
+		if (x % 3 == 0) {
+			y += 3;
+			x = 0;
+		}
+	}
+}
 int main()
 {
 	int sec = 3;
@@ -58,5 +70,13 @@ int main()
 		Sleep(1000);
 	}
 	system("cls");
+	while (TRUE)
+	{
+		KeepHole();
+
+		Sleep(500);
+		system("cls");
+	}
+
 	return 0;
 }
