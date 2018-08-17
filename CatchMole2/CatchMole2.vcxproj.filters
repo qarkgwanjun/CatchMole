@@ -27,9 +27,6 @@
     <ClCompile Include="Location.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MoleToCatch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="MoveMole.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -37,6 +34,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Setcolor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchMole.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StartMoleGame.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

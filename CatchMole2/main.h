@@ -7,13 +7,13 @@
 
 #define TRUE 1
 using namespace std;
-
+void StartMoleGame();
 void gotoxy(int x, int y);
 void setcolor(int color, int bgcolor);
 void KeepHole();
 int MoveMole(int *Location);
 int* Location();
-int MoleToCatch(int *a);
+int CatchMole(int *a);
 int PrintResult(int *score, int *count, int *last);
 
 
