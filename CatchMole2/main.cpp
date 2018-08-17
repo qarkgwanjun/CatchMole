@@ -1,6 +1,6 @@
 #include "main.h"
 
-void gotoxy(int x, int y) {// 콘솔 화면 커서 이동
+/*void gotoxy(int x, int y) {// 콘솔 화면 커서 이동
 COORD pos = { x,y };
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 
@@ -89,7 +89,7 @@ void PrintResult(int *score, int *count) {
 		gotoxy(40, 19);
 		cout << "실패 : " << *count << "점";
 	}
-}
+}*/
 int main()
 {
 	int sec = 3;
