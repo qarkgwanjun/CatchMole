@@ -19,7 +19,7 @@ int main()
 		//MoleToCatch(&IsMoleHead);
 		 
 		int Score = CatchMole(&IsMoleHead);
-
+		 
 		int FinishMoleGame = PrintResult(&Score, &count, &last);
 		if (FinishMoleGame == 1000)
 		{
