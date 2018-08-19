@@ -24,7 +24,7 @@ int main()
 		if (FinishMoleGame == 1000)
 			break;
 		
-		Sleep(500);
+		Sleep(100);
 		system("cls");
 		free(rn);
 	}

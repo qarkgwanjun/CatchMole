@@ -34,6 +34,7 @@ int PrintResult(int *Score1, int* count, int* last)
 		cout << "弛                                        弛" << endl;
 		gotoxy(18, 10);
 		cout << "戌式式式式式式式式式式式式式式式式式式式式戎" << endl;
+		Sleep(2000);
 	}
 	return *last;
 }
