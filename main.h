@@ -15,5 +15,6 @@ int MoveMole(int *Location);
 int* Location();
 int MoleToCatch(int *a);
 void PrintResult(int *score, int *count);
+void StartMoleGame();
 
 
