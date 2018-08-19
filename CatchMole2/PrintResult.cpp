@@ -2,13 +2,13 @@
 
 int PrintResult(int *Score1, int* count, int* last)
 {
-	if (*Score1 == 11) {
+	if (*Score1 == 1) {
 		*count += 100;
 		*last += 100;
 		gotoxy(40, 19);
 		cout << "¼º°ø : " << *count << "Á¡";
 	}
-	else if (*Score1 == 12) {
+	else if (*Score1 == 2) {
 		*count -= 100;
 		*last += 100;
 		gotoxy(40, 19);

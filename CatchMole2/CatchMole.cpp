@@ -5,14 +5,13 @@ int CatchMole(int *a) {
 	int d = key - 48;
 	int count = 0;
 
-	if (_kbhit())
-	{
+	if (_kbhit()){
 		if (d == *a) {
-			count = 11;
+			count = 1;
 			return count;
 		}
 		else {
-			count = 12;
+			count = 2;
 			return count;
 		}
 	}

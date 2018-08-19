@@ -11,21 +11,20 @@ int main()
 	
 	while (TRUE)
 	{
-		int* rn = Location();
 		KeepHole();
 
-		int IsMoleHead = MoveMole(rn);
+		int* rn = Location();
+
+		int IsMoveMole = MoveMole(rn);
 		 
-		//MoleToCatch(&IsMoleHead);
+		int IsCatchMole = CatchMole(&IsMoveMole);
 		 
-		int Score = CatchMole(&IsMoleHead);
-		 
-		int FinishMoleGame = PrintResult(&Score, &count, &last);
+		int FinishMoleGame = PrintResult(&IsCatchMole, &count, &last);
+	
 		if (FinishMoleGame == 1000)
-		{
 			break;
-		}
-		Sleep(1000);
+		
+		Sleep(500);
 		system("cls");
 		free(rn);
 	}
