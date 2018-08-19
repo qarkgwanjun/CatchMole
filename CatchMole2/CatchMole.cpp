@@ -2,12 +2,10 @@
 
 int CatchMole(int *a) {
 	int count = 0;
-	while (TRUE)
-	{
-		int key = _getch();
-		int d = key - 48;
+	while (TRUE){
+		int key = _getch() - 48;
 		if (_kbhit()) {
-			if (d == *a) {
+			if (key == *a) {
 				count = 1;
 				return count;
 				break;
