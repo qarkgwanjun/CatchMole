@@ -15,7 +15,7 @@ int main()
 		KeepHole();
 
 		int IsMoleHead = MoveMole(rn);
-
+		 
 		//MoleToCatch(&IsMoleHead);
 
 		int Score = CatchMole(&IsMoleHead);
