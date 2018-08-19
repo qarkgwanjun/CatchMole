@@ -6,6 +6,7 @@
 #include <conio.h>
 
 #define TRUE 1
+
 using namespace std;
 void StartMoleGame();
 void gotoxy(int x, int y);
@@ -15,5 +16,6 @@ int MoveMole(int *Location);
 int* Location();
 int CatchMole(int *a);
 int PrintResult(int *score, int *count, int *last);
+
 
 

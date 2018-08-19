@@ -8,13 +8,14 @@ int PrintResult(int *Score1, int* count, int* last)
 		gotoxy(40, 19);
 		cout << "성공 : " << *count << "점";
 	}
-	if (*Score1 == 12) {
+	else if (*Score1 == 12) {
 		*count -= 100;
 		*last += 100;
 		gotoxy(40, 19);
 		cout << "실패 : " << *count << "점";
 	}
 	if (*last == 1000) {
+		system("cls");
 		setcolor(10, 0);
 
 		gotoxy(18, 3);
@@ -33,9 +34,6 @@ int PrintResult(int *Score1, int* count, int* last)
 		cout << "│                                        │" << endl;
 		gotoxy(18, 10);
 		cout << "└────────────────────┘" << endl;
-
-		_getch();
-		system("cls");
 	}
 	return *last;
 }

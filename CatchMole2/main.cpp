@@ -1,12 +1,11 @@
 #include "main.h"
 
-
 int main()
 {
 	int count = 0;
 	int last = 0;
 	srand((unsigned)time(NULL));
-	
+
 	StartMoleGame();
 	//게임 시작 화면
 	
@@ -26,7 +25,6 @@ int main()
 		{
 			break;
 		}
-
 		Sleep(1000);
 		system("cls");
 		free(rn);
