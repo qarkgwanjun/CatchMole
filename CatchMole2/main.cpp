@@ -17,7 +17,7 @@ int main()
 		int IsMoleHead = MoveMole(rn);
 		 
 		//MoleToCatch(&IsMoleHead);
-
+		 
 		int Score = CatchMole(&IsMoleHead);
 
 		int FinishMoleGame = PrintResult(&Score, &count, &last);
