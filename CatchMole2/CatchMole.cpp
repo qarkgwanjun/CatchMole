@@ -1,18 +1,29 @@
 #include "main.h"
 
 int CatchMole(int *a) {
-	int key = _getch();
-	int d = key - 48;
 	int count = 0;
-
-	if (_kbhit()){
-		if (d == *a) {
-			count = 1;
-			return count;
+	clock_t start = clock();
+	while (TRUE) {
+		int key = _getch();
+		int num = key - 48;
+		start = clock();
+		if (_kbhit()) {
+			if (num == *a) {
+				count = 1;
+				return count;
+				break;
+			}
+			else {
+				count = 2;
+				return count;
+				break;
+			}
 		}
-		else {
-			count = 2;
-			return count;
-		}
+		if (((clock() - start) / CLOCKS_PER_SEC) > 0) {
+			while (1)
+			{
+				system("cls");
+			}
+		}	
 	}
 }

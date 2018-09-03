@@ -4,6 +4,7 @@ int MoveMole(int *Location) {
 	int rn1 = rand() % 3;
 	int rn2 = rand() % 3 + 3;
 	int c = 0;
+	
 	gotoxy(Location[rn1], Location[rn2]);
 	cout << " |0 nn 0|" << endl;
 

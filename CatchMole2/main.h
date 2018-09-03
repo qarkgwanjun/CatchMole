@@ -4,6 +4,7 @@
 #include <Windows.h>
 #include <Time.h>
 #include <conio.h>
+#include <cstdlib>
 
 #define TRUE 1
 

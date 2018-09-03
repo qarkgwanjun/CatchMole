@@ -7,8 +7,7 @@ int main()
 	srand((unsigned)time(NULL));
 
 	StartMoleGame();
-	//게임 시작 화면
-	
+
 	while (TRUE)
 	{
 		KeepHole();
@@ -21,7 +20,7 @@ int main()
 		 
 		int FinishMoleGame = PrintResult(&IsCatchMole, &count, &last);
 	
-		if (FinishMoleGame == 1000)
+		if (FinishMoleGame == 10)
 			break;
 		
 		Sleep(500);

@@ -4,17 +4,17 @@ int PrintResult(int *Score1, int* count, int* last)
 {
 	if (*Score1 == 1) {
 		*count += 100;
-		*last += 100;
+		*last ++;
 		gotoxy(40, 19);
 		cout << "성공 : " << *count << "점";
 	}
 	else if (*Score1 == 2) {
 		*count -= 100;
-		*last += 100;
+		*last ++;
 		gotoxy(40, 19);
 		cout << "실패 : " << *count << "점";
 	}
-	if (*last == 1000) {
+	if (*last == 10) {
 		system("cls");
 		setcolor(10, 0);
 
@@ -34,6 +34,7 @@ int PrintResult(int *Score1, int* count, int* last)
 		cout << "│                                        │" << endl;
 		gotoxy(18, 10);
 		cout << "└────────────────────┘" << endl;
+		Sleep(2000);
 	}
 	return *last;
 }
