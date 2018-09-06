@@ -16,10 +16,12 @@ void StartMoleGame()
 	gotoxy(18, 7);
 	cout << "│         아무키나 누르면 시작!          │" << endl;
 	gotoxy(18, 8);
-	cout << "│        게임 조작키 :  1~9 번키         │" << endl;
-	gotoxy(18, 9);
 	cout << "│                                        │" << endl;
+	gotoxy(18, 9);
+	cout << "│        게임 조작키 :  1~9 번키         │" << endl;
 	gotoxy(18, 10);
+	cout << "│                                        │" << endl;
+	gotoxy(18, 11);
 	cout << "└────────────────────┘" << endl;
 
 	_getch();

@@ -20,7 +20,7 @@ int main()
 		 
 		int FinishMoleGame = PrintResult(&IsCatchMole, &count, &last);
 	
-		if (FinishMoleGame == 10)
+		if (FinishMoleGame == 500)
 			break;
 		
 		Sleep(100);
