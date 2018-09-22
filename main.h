@@ -14,7 +14,7 @@ void KeepHole();
 int MoveMole(int *Location);
 int* Location();
 int CatchMole(int *a);
-void PrintResult(int *score, int *count, int *last);
+int PrintResult(int *score, int *count, int *last);
 void StartMoleGame();
 
 
