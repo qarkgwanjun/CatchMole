@@ -13,8 +13,8 @@ void setcolor(int color, int bgcolor);
 void KeepHole();
 int MoveMole(int *Location);
 int* Location();
-int MoleToCatch(int *a);
-void PrintResult(int *score, int *count);
+int CatchMole(int *a);
+void PrintResult(int *score, int *count, int *last);
 void StartMoleGame();
 
 

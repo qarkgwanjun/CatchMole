@@ -1,6 +1,7 @@
 #include "main.h"
 
-void StartMoleGame() {
+void StartMoleGame()
+{
 	int sec = 3;
 	setcolor(10, 0);                //10 :초록
 									//게임 시작 전 화면
@@ -25,8 +26,7 @@ void StartMoleGame() {
 	system("cls");
 
 	//게임 대기 화면
-
-	for (int i = 0; i < 3; i++) // 게임 5초 대기
+	for (int i = 0; i < 3; i++) // 게임 3초 대기
 	{
 		setcolor(10, 0);                //10 :초록
 		gotoxy(5, 5);
@@ -35,5 +35,4 @@ void StartMoleGame() {
 		Sleep(1000);
 	}
 	system("cls");
-	//게임 시작 화면
 }

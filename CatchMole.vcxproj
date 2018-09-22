@@ -144,7 +144,7 @@
     <ClCompile Include="KeepHole.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MoleToCatch.cpp" />
+    <ClCompile Include="CatchMole.cpp" />
     <ClCompile Include="MoveMole.cpp" />
     <ClCompile Include="PrintResult.cpp" />
     <ClCompile Include="Setcolor.cpp" />

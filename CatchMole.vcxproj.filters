@@ -27,19 +27,19 @@
     <ClCompile Include="KeepHole.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MoveMole.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Location.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MoleToCatch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="PrintResult.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="StartMoleGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveMole.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchMole.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
