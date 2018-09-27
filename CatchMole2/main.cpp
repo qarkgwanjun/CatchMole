@@ -5,6 +5,7 @@
 #include <conio.h>
 
 #define TRUE 1
+
 using namespace std;
 
 void gotoxy(int x, int y) {// 콘솔 화면 커서 이동
