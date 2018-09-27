@@ -14,6 +14,12 @@ int PrintResult(int *Score1, int* count, int* last)
 		gotoxy(40, 19);
 		cout << "실패 : " << *count << "점";
 	}
+	else if (*Score1 == 3) {
+		*count -= 100;
+		*last += 100;
+		gotoxy(40, 19);
+		cout << "시간초과!!: " << *count << "점";
+	}
 	if (*last == 500) {
 		system("cls");
 		setcolor(10, 0);

@@ -3,39 +3,36 @@
 int CatchMole(int *a)
 {
 	int count = 0;
+	char key;
 
 	while (TRUE)
 	{
-
 		clock_t start = clock();
 
-		if (_kbhit())
+		while (TRUE)
 		{
-			int key = _getch();
-			int d = key - 48;
-
 			start = clock();
-
-			if (d == *a)
+			key = _getch();
+			int d = key - 48;
+			if ((clock() - start) / CLOCKS_PER_SEC > 0.7f)
 			{
-				count = 1;
+				count = 3;
 				return count;
 				break;
 			}
-			else
+			if (_kbhit())
 			{
-				count = 2;
-				return count;
-				break;
+				if (d == *a)
+				{
+					count = 1;
+					return count;
+				}
+				else
+				{
+					count = 2;
+					return count;
+				}
 			}
-
-		}
-
-		if ((clock() - start) / CLOCKS_PER_SEC > 2.0f)
-		{
-			count = 3;
-			return count;
-			break;
 		}
 	}
 }
