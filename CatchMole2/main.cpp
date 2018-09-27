@@ -5,9 +5,9 @@ int main()
 	int sec = 3;
 	int count = 0;
 	srand((unsigned)time(NULL));
-	setcolor(10, 0);                //10 :초록
-
-									//게임 시작 전 화면
+	setcolor(10, 0);					//10 :초록
+		
+										//게임 시작 전 화면
 	gotoxy(18, 3);
 	cout << "┌────────────────────┐" << endl;
 	gotoxy(18, 4);
@@ -28,9 +28,9 @@ int main()
 	_getch();
 	system("cls");
 
-	//게임 대기 화면
+	
 
-	for (int i = 0; i < 3; i++) // 게임 5초 대기
+	for (int i = 0; i < 3; i++)			// 게임 5초 대기
 	{
 		setcolor(10, 0);                //10 :초록
 		gotoxy(5, 5);
